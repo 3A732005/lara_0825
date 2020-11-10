@@ -26,12 +26,22 @@ Route::get('about',[PostsController::class, 'about'])->name('posts.about');
 
 Route::get('contact',[PostsController::class, 'contact'])->name('posts.contact');
 
-\App\Models\Post::create([
+/*\App\Models\Post::create([
     'title'=>'test title',
     'content'=>'test content',
-]);
+]);*/
 
-$post=new\App\Models\Post();
+/*$post=new\App\Models\Post();
 $post->title='test title';
 $post->content='test content';
-$post->save();
+$post->save();*/
+
+/*$posts=\App\Models\Post::all();
+dd($posts);*/
+
+/*$post=\App\Models\Post::find(1);
+dd($post);*/
+
+$posts=\App\Models\Post::where('id','<',10)->orderBy('id','DESC')->get();
+dd($posts);
+
