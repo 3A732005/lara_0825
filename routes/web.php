@@ -26,6 +26,7 @@ Route::get('about',[PostsController::class, 'about'])->name('posts.about');
 
 Route::get('contact',[PostsController::class, 'contact'])->name('posts.contact');
 
+//新增資料
 /*\App\Models\Post::create([
     'title'=>'test title',
     'content'=>'test content',
@@ -36,6 +37,7 @@ $post->title='test title';
 $post->content='test content';
 $post->save();*/
 
+//查詢資料
 /*$posts=\App\Models\Post::all();
 dd($posts);*/
 
@@ -45,6 +47,7 @@ dd($post);*/
 /*$posts=\App\Models\Post::where('id','<',10)->orderBy('id','DESC')->get();
 dd($posts);*/
 
+//更新資料
 /*$post=\App\Models\Post::find(1);
 $post->update([
     'title'=>'updated title',
@@ -56,6 +59,7 @@ $post->title='save dtitle';
 $post->content='save dcontent';
 $post->save();*/
 
+//刪除資料
 /*$post=\App\Models\Post::find(1);
 $post->delete();*/
 
@@ -63,6 +67,7 @@ $post->delete();*/
 
 /*\App\Models\Post::destroy(3,5,7);*/
 
+//了解 Model 和 Collection 的差異
 /*$allPosts=\App\Models\Post::all();
 dd($allPosts);*/
 /*$featuredPosts=\App\Models\Post::where('is_feature',1)->get();
