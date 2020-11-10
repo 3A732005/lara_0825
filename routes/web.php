@@ -42,6 +42,17 @@ dd($posts);*/
 /*$post=\App\Models\Post::find(1);
 dd($post);*/
 
-$posts=\App\Models\Post::where('id','<',10)->orderBy('id','DESC')->get();
-dd($posts);
+/*$posts=\App\Models\Post::where('id','<',10)->orderBy('id','DESC')->get();
+dd($posts);*/
+
+/*$post=\App\Models\Post::find(1);
+$post->update([
+    'title'=>'updated title',
+    'content'=>'updated content',
+]);*/
+
+$post=\App\Models\Post::find(1);
+$post->title='save dtitle';
+$post->content='save dcontent';
+$post->save();
 
