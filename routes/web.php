@@ -51,8 +51,14 @@ $post->update([
     'content'=>'updated content',
 ]);*/
 
-$post=\App\Models\Post::find(1);
+/*$post=\App\Models\Post::find(1);
 $post->title='save dtitle';
 $post->content='save dcontent';
-$post->save();
+$post->save();*/
 
+/*$post=\App\Models\Post::find(1);
+$post->delete();*/
+
+/*\App\Models\Post::destroy(2);*/
+
+\App\Models\Post::destroy(3,5,7);
