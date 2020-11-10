@@ -61,4 +61,15 @@ $post->delete();*/
 
 /*\App\Models\Post::destroy(2);*/
 
-\App\Models\Post::destroy(3,5,7);
+/*\App\Models\Post::destroy(3,5,7);*/
+
+/*$allPosts=\App\Models\Post::all();
+dd($allPosts);*/
+/*$featuredPosts=\App\Models\Post::where('is_feature',1)->get();
+dd($featuredPosts);*/
+
+/*$fourthPost=\App\Models\Post::find(4);
+dd($fourthPost);*/
+$lastPost=\App\Models\Post::orderBy('id','DESC')->first();
+dd($lastPost);
+
