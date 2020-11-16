@@ -59,8 +59,8 @@ Route::get('/', function () {
     /*\App\Models\Post::destroy(3,5,7);*/
 
 //了解 Model 和 Collection 的差異
-    $allPosts=\App\Models\Post::all();
-    dd($allPosts);
+//    $allPosts=\App\Models\Post::all();
+//    dd($allPosts);
     /*$featuredPosts=\App\Models\Post::where('is_feature',1)->get();
     dd($featuredPosts);*/
 
@@ -68,6 +68,12 @@ Route::get('/', function () {
     dd($fourthPost);*/
     /*$lastPost=\App\Models\Post::orderBy('id','DESC')->first();
     dd($lastPost);*/
+
+    $post=\App\Models\Post::find(4);
+    foreach($post->comments as $comment){
+        echo $comment->content.'<br>';
+    }
+
 });
 
 Route::get('posts',[PostsController::class, 'index'])->name('posts.index');
